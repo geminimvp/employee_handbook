@@ -1,0 +1,5 @@
+# Employment - Harassment and Rude behavior
+
+I (Jim) want to be extra clear on this point: I expect us to argue and, in the heat of the moment, to perhaps even get loud with each other. We need to be passionate about our choices and ready to defend them, but attacking ideas can run too close to attacking people -- that's where we draw the line. When you find yourself on the wrong side of the line, you need to follow up with a sincere apology (the kind that hurts to give). To be extra-clear, if this happens your job is to recognize and apologize.
+
+In most handbooks, harassment is defined as creating an environment of fear or intimidation. Harassment here is also defined as being an asshole on purpose to anyone for any reason, beyond the bounds of "the head of the moment" referenced above. This rule applies equally to employees and to clients. If you witness such behavior, report it to your supervisor or directly to Jim. In the (hopefully unlikely) event that Jim _is_ the asshole, report the behavior to Blake. No free passes on this one.
