@@ -2,8 +2,10 @@
 
 ## Health
 
-Gemini provides full health benefits to its employees and their families. Our current provider is UnitedHealthCare, and we participate via Hayseed Ventures's group plan. It's not cheap, so we will always look
-for ways to save money. We will not, however, save money at the expense of anyone's health.
+Gemini provides health benefits to its employees as follows:
+
+* Gemini pays the premium for coverage of the employee
+* The employee can choose to pay for additional coverage for spouse or family
 
 ## Workers Compensation
 
