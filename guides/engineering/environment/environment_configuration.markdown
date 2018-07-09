@@ -27,16 +27,15 @@ Installing rbenv is simple in theory, but can be tricky.
 
 **On Fedora:**
 
-    cd
     git clone git://github.com/sstephenson/rbenv.git .rbenv
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
     echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
     exec $SHELL
-    
+
     git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
     echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
     exec $SHELL
-    
+
     source ~/.bash_profile
     source ~/.bashrc
 
@@ -57,7 +56,7 @@ Once you've got rbenv working, you should be able to run:
     rbenv install 2.3.6
 To install Ruby 2.3.6, which is currently being used by Engine Storefront. You can always check which Ruby version is being used by a project by looking for a `.ruby-version` file in the repo.
 
-**WARNING** I had some serious problems with this on Fedora. 
+**WARNING** I had some serious problems with this on Fedora.
 I was able to get pre-2.4.x Ruby versions install using [this hack](https://github.com/rbenv/ruby-build/issues/1115).
 
 ## Bundler
@@ -66,7 +65,7 @@ Bundler is a gem manager. It works with Gemfiles, it's really great.
     $ gem install bundler
 
 ## Postgres
-**On Fedora:** 
+**On Fedora:**
 Grab the repos with dnf:
 
     $ sudo dnf install postgresql-server postgresql-contrib
@@ -93,14 +92,14 @@ Start the postgres service:
 Ask someone :)
 
 ## Setup
-Clone the Engine Storefront repo. 
+Clone the Engine Storefront repo.
 
 Set your local Ruby version by using `rbenv local 2.3.6`. Install the gems by running `bundle install`.
 
 When I set my local database up, I ran:
-    
+
     $ bundle install && yarn install
-    
+
     $ bundle exec rails db:create:all
     $ bundle exec rails db:migrate
     $ bundle exec rails db:seed
