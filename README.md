@@ -25,5 +25,7 @@ Unlikely, but we'll give it our best.
   + [Leave](https://github.com/geminimvp/employee_handbook/blob/master/benefits/leave.markdown)
   + [Insurance](https://github.com/geminimvp/employee_handbook/blob/master/benefits/insurance.markdown)
   + [Retirement](https://github.com/geminimvp/employee_handbook/blob/master/benefits/retirement.markdown)
+- [Guides](https://github.com/geminimvp/employee_handbook/tree/master/guides/)
+  + [Engineering](https://github.com/geminimvp/employee_handbook/tree/master/guides/engineering)
 - [Appendix](https://github.com/geminimvp/employee_handbook/tree/master/appendix/)
   + [Resources](https://github.com/geminimvp/employee_handbook/blob/master/appendix/resources.markdown)
