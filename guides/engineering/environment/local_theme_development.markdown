@@ -39,7 +39,7 @@ So themes are placed in their own repositories which can be loaded into your loc
 4. [Run the theme:import rake task](https://github.com/geminimvp/engine_storefront/blob/master/README.md#importing-themes) to load the theme
 	
 	```
-	$ export THEME=THEME_NAME bundle exec rake theme:import
+	$ THEME=THEME_NAME bundle exec rake theme:import
 	```
 
 5. QA your changes locally
