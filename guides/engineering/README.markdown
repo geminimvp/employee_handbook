@@ -9,5 +9,5 @@ If you'd like to add your own guides please give [Contributing](https://github.c
 # Table of Contents
 
 - [Environment](https://github.com/geminimvp/employee_handbook/tree/master/guides/engineering)
-    + [Environment Configuration](https://github.com/geminimvp/employee_handbook/tree/master/guides/engineering/environment_configuration.markdown)
-    + [Local Theme Development](https://github.com/geminimvp/employee_handbook/tree/master/guides/engineering/local_theme_development.markdown)
+    + [Environment Configuration](https://github.com/geminimvp/employee_handbook/tree/master/guides/engineering/environment/environment_configuration.markdown)
+    + [Local Theme Development](https://github.com/geminimvp/employee_handbook/tree/master/guides/engineering/environment/local_theme_development.markdown)
