@@ -1,8 +1,12 @@
 # Engine Theme Development Best Practices
 
-Engine themes are designed with extensibility and longevity in mind. When developing, try to imagine how you would feel editing this theme two years from now. Keep in mind every Engine theme will eventually be inherited by the client.
+Engine themes are designed with extensibility and longevity in mind. When developing a new theme, think about how you would feel extending the theme two years from now. Keep in mind every Engine theme will eventually be inherited by the client.
 
-These best practices are not hard and fast rules but instead are a guide in order for us to iterate quickly. Before you begin development, check out [Local Theme Development](local_theme_development.markdown).
+These best practices are not hard and fast rules; instead are guidelines to help us iterate quickly. Before you begin development, read [Local Theme Development](local_theme_development.markdown).
+
+<img src="https://toggl.com/blog/wp-content/uploads/2017/02/software-developer-life-cycle-toggl-blog-cover.jpg" width="500">
+
+This is meant to be a living document, please make share your knowledge with the team by submitting a PR.
 
 
 ## File Structure
@@ -13,7 +17,7 @@ theme_<theme_name>
 │   └───posts
 ├───spree
 │   ├───checkout
-│		└───payment
+│	|	└───payment
 │   ├───home
 │   ├───layouts
 │   ├───orders
@@ -24,53 +28,61 @@ theme_<theme_name>
 │   ├───css
 │   ├───fonts
 │   ├───img
-│		└───favicons
+│	|	└───favicons
 │   ├───js
-│		└───plugins
+│	|	└───plugins
 │   └───scss
 │		└───plugins
 └───README.md
 ```
 ## Liquid
 
-1. All templates should be built with [liquid](https://shopify.github.io/liquid/basics/introduction/).
-	- ERB is not ideal for engine because we don't want to get theme developers access to engine storefront models and controllers.
-	- Liquid is the templating used for Shopify which makes the transition easier for lots of theme developers.
-2. The shared folder should contain partials that are used more than once or if you believe it may be used more than once in the future, future developers will thank you.
-3. Assets partials
+Liquid is a templating language first developed by Shopify. We use it in place of HTML or ERB to create the markup for our themes. [Liquid is open source](https://github.com/Shopify/liquid) and easy to extend with Drops.
+
+1. All templates should be built with [Liquid](https://shopify.github.io/liquid/basics/introduction/).
+	- ERB is not ideal for Engine themes because theme developers should not have access to `engine_storefront` models.
+	- Liquid is the templating used in Shopify themes; removing a barrier for brands looking to switch to Engine.
+2. The shared folder should contain partials that could be used in more than one part of the site
+	- When in doubt, make it a partial! Future developers will thank you.
+3. Assets partials 
 	- scripts.liquid
 	- head.liquid
 
 ## CSS
 
-1. Bootstrap is the preferred framework
-	- Why?
+1. [Bootstrap](https://getbootstrap.com/) is Engine's preferred CSS framework
+	- Why? (Glad you asked)
 		- Adoption
-			- Bootstrap is the most commonly used frontend framework, so future theme developers are more likely to be familiar with it.
+			- Bootstrap is the most commonly used front-end framework, so future theme developers are more likely to be familiar with it (remember we care about longevity).
+			- Bootstrap has been tested on thousands of sites across the web.
 		- Support
-			- Bootstrap is supported by Twitter and a big community of front-end developers and documentation is well-written which makes answers easy to find.
-2. Do's and Donut's
+			- Bootstrap is supported by Twitter and a massive community of front-end developers.
+			- The documentation is well-written which makes answers easy to find.
+			- It is rare that the answer to your problem isn't on Stackoverflow
+2. Do's and Donut's 🍩
 	- Do's
-		- Use bootstrap grid and be mindful about naming selectors
-		- Use variables_override.scss to override bootstrap variables
+		- Use the Bootstrap grid and be mindful about naming selectors
+		- Use variables_override.scss to override Bootstrap variables
 	- Donut's
-		- Don't touch bootstrap source
+		- Don't touch Bootstrap source, it is confusing (and mean).
 		- Don't abuse inline styling. Most styling needs to be contained within the SCSS.
 3. SCSS
 	- We use SCSS mainly in order to keep our file structure semantic and clean.
-	- [Compiling SCSS](local_theme_development.markdown).
+	- [Compiling SCSS](local_theme_development.markdown)
+		- From the directory containing style.scss: `sass --sourcemap=none --watch style.scss:../css/style.css`
 	- File structure
-		- style.scss contains global styles.
-		- Each partial and page should have their own SCSS file.
-		- variables_override.scss contains styles overriding bootstrap styles.
+		- `style.scss` should contain global styles. Consider building a CSS "brand Bible."
+		- Each partial and page should have it's own SCSS file.
+		- variables_override.scss contains styles overriding Bootstrap styles.
 
 ## Javascript
 
 1. Don't use JS where CSS will work.
 2. Use vanilla Javascript when possible and try to avoid using jQuery.
-3. [Vue.js](https://vuejs.org/) is our framework of choice.
+	- **Please** [use ES6](https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond)
+3. [Vue.js](https://vuejs.org/) is Engine's framework of choice.
 	- Vue is easy to pickup and we feel it's a good choice for longevity.
-	- Vue can be implemented integrally.
-	- Again, these rules aren't hard and fast if you feel another framework is the best choice for a particular project.
-4. Global Javascript goes in custom.js.
-5. Break partial Javascript out when possible.
+	- Vue can be implemented incrementally, which is ideal for themes which might be inherited by novice developers.
+	- If you feel strongly that Vue is not the best tool for your theme, don't use it. 
+4. Global JavaScript goes in `custom.js`.
+5. Break JavaScript into smaller files when possible. 
