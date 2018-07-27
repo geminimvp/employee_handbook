@@ -17,7 +17,7 @@ theme_<theme_name>
 │   └───posts
 ├───spree
 │   ├───checkout
-│	|	└───payment
+│   |	└───payment
 │   ├───home
 │   ├───layouts
 │   ├───orders
@@ -28,11 +28,11 @@ theme_<theme_name>
 │   ├───css
 │   ├───fonts
 │   ├───img
-│	|	└───favicons
+│   |	└───favicons
 │   ├───js
-│	|	└───plugins
+│   |	└───plugins
 │   └───scss
-│		└───plugins
+|	└───plugins
 └───README.md
 ```
 ## Liquid
