@@ -68,7 +68,7 @@ Liquid is a templating language first developed by Shopify. We use it in place o
 		- Don't abuse inline styling. Most styling needs to be contained within the SCSS.
 3. SCSS
 	- We use SCSS mainly in order to keep our file structure semantic and clean.
-	- [Compiling SCSS](local_theme_development.markdown)
+	- [Compiling SCSS](local_theme_development.markdown). SCSS is compiled into one style.css file. style.css should not be edited because it will be overwritten when SCSS is compiled.
 		- From the directory containing style.scss: `sass --sourcemap=none --watch style.scss:../css/style.css`
 	- File structure
 		- `style.scss` should contain global styles. Consider building a CSS "brand Bible."
