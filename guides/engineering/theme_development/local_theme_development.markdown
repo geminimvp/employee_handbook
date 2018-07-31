@@ -18,12 +18,12 @@ So themes are placed in their own repositories which can be loaded into your loc
 	```
 
 2. Clone the theme repository into the same directory you cloned [engine_storefront](https://github.com/geminimvp/engine_storefront).
-	
+
 	**The theme needs to be in the same local directory as the engine_storefront repository**
 	<img src="https://media.giphy.com/media/l2JedPGiZueLYAryo/giphy.gif" />
 
 
-	
+
 	```
 	$ git clone git@github.com:geminimvp/theme_THEME_NAME.git
 	```
@@ -35,9 +35,11 @@ So themes are placed in their own repositories which can be loaded into your loc
 	- bug/branch-name... for small edits and visual bugs
 	- feature/branch-name... for large changes and new site features
 	- chore/branch-name... for housekeeping
+	- In order to see SCSS changes, SCSS needs to be compiled into CSS.
+		- Navigate to your SCSS folder and run ```sass --watch style.scss:../css/style.css```
 
 4. [Run the theme:import rake task](https://github.com/geminimvp/engine_storefront/blob/master/README.md#importing-themes) to load the theme
-	
+
 	```
 	$ THEME=THEME_NAME bundle exec rake theme:import
 	```
@@ -47,7 +49,7 @@ So themes are placed in their own repositories which can be loaded into your loc
 
 6. Commit and make a PR to the theme repository
 
-# Deploying a theme 
+# Deploying a theme
 
 ## The safe way
 
@@ -71,13 +73,13 @@ Once your PR has been reviewed and merged, you can deploy to master via the [eng
 	$ git checkout origin master
 	$ git pull
 	```
-	
+
 2. Zip up the theme
 
 	```
 	$ zip -r theme_name.zip .
 	```
-	
+
 3. Navigate to the **staging** admin panel and import a new theme from the theme_editor
 
 4. QA on staging
