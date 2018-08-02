@@ -1,6 +1,6 @@
 # Mac OS
 
-This guide was written on `MacOS High Sierra 10.13.6`. It favors Fish syntax.
+This section was written on `MacOS High Sierra 10.13.6`. It favors Fish syntax.
 
 1. Install [Homebrew](https://brew.sh/)
 
@@ -58,10 +58,10 @@ $ mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.c
 
 Purely your preference. If you don't have a favorite, here are a few great options:
 
-  - VS Code
-  - Atom
-  - Sublime Text
-  - SpaceMacs
+  - [VS Code](https://code.visualstudio.com/)
+  - [Atom](https://atom.io/)
+  - [Sublime Text](https://www.sublimetext.com/)
+  - [Spacemacs](http://spacemacs.org/)
   
 6. Generate an SSH key and add it to GitHub
 
@@ -158,7 +158,7 @@ ImageMagick is a dependency for pretty much everything.
 $ brew install imagemagick
 ```
   
-# Engine Storefront
+### Engine Storefront
 
 1. Make a new directory `~/src`
 
@@ -213,7 +213,7 @@ $ bundle exec rake spree_sample:load
 
 # Fedora
 
-This document will cover environment configuration for getting Engine Storefront up and running. This was tested and written on Fedora 26 (ymmv).
+This document will cover environment configuration for getting Engine Storefront up and running. This section tested and written on Fedora 26 (ymmv).
 
 1. [Dependencies](#Dependencies)
 2. [rbenv](#rbenv)
@@ -228,12 +228,6 @@ This document will cover environment configuration for getting Engine Storefront
 On **Fedora**, I had to install some dependencies before hand. Here is what I started with:
 
     $ sudo yum install git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel
-On **Mac OS**, you will need to install the XCode tools:
-
-    $ xcode-select --install
-Also, install Homebrew:
-
-    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 ## rbenv
 rbenv is a environment manager for Ruby. There are other options, [rbenv is the best](https://github.com/rbenv/rbenv/wiki/Why-rbenv?).
@@ -252,10 +246,6 @@ Installing rbenv is simple in theory, but can be tricky.
 
     source ~/.bash_profile
     source ~/.bashrc
-
-**On Mac:**
-
-    $ brew install rbenv
 
 Run ``rbenv init`` and follow the instructions.
 
@@ -293,14 +283,6 @@ Run the setup:
 [Allow connections to Postgres.](https://stackoverflow.com/questions/3278379/how-to-configure-postgresql-to-accept-all-incoming-connections) *This is not secure, but it works for development.*
 
 If you have issues, refer to the [Fedora docs](https://fedoraproject.org/wiki/PostgreSQL#Installation).
-
-**On Mac:**
-Install Postgres with brew:
-
-    $ brew install postgresql
-Start the postgres service:
-
-    $ brew services start postgresql
 
 ## GitHub Access
 Ask someone :)
