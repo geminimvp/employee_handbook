@@ -43,6 +43,11 @@ So themes are placed in their own repositories which can be loaded into your loc
 	```
 	$ THEME=THEME_NAME bundle exec rake theme:import
 	```
+	Or in fish:
+	```
+	set THEME THEME_NAME; bundle exec rake theme:import
+	```
+
 	If you experience any issues with this step, refer to the [engine_storefront readme](https://github.com/geminimvp/engine_storefront/blob/master/README.md#importing-themes). Please add your issue to the caveats section if it is not already documented.
 
 5. QA your changes locally
