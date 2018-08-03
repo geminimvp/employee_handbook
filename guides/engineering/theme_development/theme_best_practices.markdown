@@ -35,6 +35,13 @@ theme_<theme_name>
 |	└───plugins
 └───README.md
 ```
+
+## Version Control
+
+As this is a startup some cowboy coding is expected, but it is never a good idea to ignore version control. During the development and support of any theme you build, keep your code up to date in GitHub. Even if you think a fix is temporary or insignificant, make a PR and document that you made the change. 
+
+*If you write code outside of version control, that code doesn't exist.*
+
 ## Liquid
 
 Liquid is a templating language first developed by Shopify. We use it in place of HTML or ERB to create the markup for our themes. [Liquid is open source](https://github.com/Shopify/liquid) and easy to extend with Drops.
