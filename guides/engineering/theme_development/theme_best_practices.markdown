@@ -38,7 +38,7 @@ theme_<theme_name>
 
 ## Version Control
 
-As this is a startup some cowboy coding is expected, but it is never a good idea to ignore version control. During the development and support of any theme you build, keep your code up to date in GitHub. Even if you think a fix is temporary or insignificant, make a PR and document that you made the change. 
+As this is a startup some cowboy coding is expected, but it is never a good idea to ignore version control. During the development and support of any theme you build, keep your code up to date in GitHub. Even if you think a fix is temporary or insignificant, make a PR and document that you made the change.
 
 *If you write code outside of version control, that code doesn't exist.*
 
@@ -51,7 +51,7 @@ Liquid is a templating language first developed by Shopify. We use it in place o
 	- Liquid is the templating used in Shopify themes; removing a barrier for brands looking to switch to Engine.
 2. The shared folder should contain partials that could be used in more than one part of the site
 	- When in doubt, make it a partial! Future developers will thank you.
-3. Assets partials 
+3. Assets partials
 	- scripts.liquid
 	- head.liquid
 
@@ -80,7 +80,7 @@ Liquid is a templating language first developed by Shopify. We use it in place o
 	- File structure
 		- `style.scss` should contain global styles. Consider building a CSS "brand Bible."
 		- Each partial and page should have it's own SCSS file.
-		- variables_override.scss contains styles overriding Bootstrap styles.
+		- variables.scss contains variables used or will be used in more than one SCSS file.
 
 ## Javascript
 
@@ -90,6 +90,6 @@ Liquid is a templating language first developed by Shopify. We use it in place o
 3. [Vue.js](https://vuejs.org/) is Engine's framework of choice.
 	- Vue is easy to pickup and we feel it's a good choice for longevity.
 	- Vue can be implemented incrementally, which is ideal for themes which might be inherited by novice developers.
-	- If you feel strongly that Vue is not the best tool for your theme, don't use it. 
+	- If you feel strongly that Vue is not the best tool for your theme, don't use it.
 4. Global JavaScript goes in `custom.js`.
-5. Break JavaScript into smaller files when possible. 
+5. Break JavaScript into smaller files when possible.
