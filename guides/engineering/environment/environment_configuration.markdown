@@ -1,4 +1,4 @@
-# Mac OS - Bash Shell
+# Mac OS - Bash/Oh My Zsh Shell
 
 This section was written on `MacOS High Sierra 10.13.6`.
 
@@ -122,6 +122,22 @@ ImageMagick is a dependency for pretty much everything.
 
 ```
 $ brew install imagemagick
+```
+
+## Oh My Zsh
+
+After completing steps 1 - 12 you are ready to install Oh My Zsh if you please:
+
+1. Run
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+2. Enable the asdf plugin by adding it to your ```plugins``` definition in ```~/.zshrc```
+```
+plugins=(
+  asdf
+)
 ```
 
 ### Engine Storefront
